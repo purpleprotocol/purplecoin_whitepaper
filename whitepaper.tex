@@ -114,12 +114,12 @@ We further employ a Sequenced Proof-of-Work model in order to secure the network
 
 While eventually, there will be an ASIC created for all ASIC friendly algorithms, sequencing ASIC friendly algorithms using some algorithms that are already used along with ones which are not widely used will protect the network while it is still young. This also creates incentives for miners with outdated ASICs built for other networks to reuse that hardware for the benefit of our network.
 
-\section{State model}
+\section{State Model}
 In a sharded ledger, we have to think differently on how assets are controlled when compared to a single ledger. As we are following Bitcoin's model, each asset will be encoded as unspent outputs. As inter-shard transfers introduce great complexity to the system, they will not be possible. As such, fungible assets will be split equally across all shards. Purplecoins will be split equally by requiring each block to create a new coinbase output on a different shard in sequence. Another caveat is that in this model, one would often require to send a single transaction containing combined unspent outputs found on different shards. As such, these kind of transfers are by definition not atomic, and will partially settle at different times. Atomic transfers are possible only on single shards. 
 
 Another problem is when new assets are encoded in the ledger, we need a way to safely partition them across all shards. Another problem arises in the case of non-fungible assets which could potentially be duplicated on different shards. 
 
-\subsection{Asset specific accounts}
+\subsection{Asset Specific Accounts}
 We further leverage and expand the transaction model of Bitcoin in order to solve these problems. An unspent output is encoded in Bitcoin as the amount of the output and the hash of the spending script of the output. The spender must provide this script when spending the output which contains their public key and signature along with any other spending rules. The hash of the spending script is the Bitcoin address owning that specific output. As such, we can encode asset specific rules by concatenating a second script hash to the address. Then, in order to spend, or issue a specific asset both the asset script and spending script have to perfectly match the address. As each asset has a strongly differentiated type of address, they cannot be duplicated across shards as it would yield a different address half. We can then encode rules in the asset script such as:
 \begin{enumerate}
   \item Asset x can only be created on a subset of shards or a single shard.

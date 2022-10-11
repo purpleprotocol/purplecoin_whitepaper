@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.9)  11 OCT 2022 00:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.9)  11 OCT 2022 02:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -674,7 +674,7 @@ ik, Nitya Sub-ra-ma-nian.
 Here is how much of TeX's memory you used:
  17959 strings out of 478268
  381537 string characters out of 5846347
- 958770 words of memory out of 5000000
+ 958771 words of memory out of 5000000
  35854 multiletter control sequences out of 15000+600000
  474466 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -689,7 +689,7 @@ m/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb>
-Output written on whitepaper.pdf (5 pages, 131303 bytes).
+Output written on whitepaper.pdf (5 pages, 131305 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
